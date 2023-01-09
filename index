@@ -84,8 +84,35 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Customer Service Manager | Kazang Solar Distributors</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2022 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p>Key responsibilities:</p><ul>
+            <li>Resolved customer complaints while prioritizing customer
+              satisfaction and loyalty.</li>
+             <li>Trained and regularly mentored associates on performance-
+              oriented strategies and customer service techniques.</li>
+              <li>special projects by using effective decision making,
+                critical thinking and time management skills.</li> 
+              <li>customer service operations to assess agent
+                performance and provide feedback.</li> 
+              <li>customer support strategy to increase customer
+              retention.</li>
+              <li>Aided senior leadership during executive decision-making
+                processes and generated daily reports to recommend corrective
+                actions and improvements.</li> 
+              <li>Built partnerships with diverse internal teams and sales, finance
+                and operations departments to streamline processes.</li>
+              <li>Consistently managed 22-person staff, effectively resolving
+                issues.</li>
+              <li>Exceeded team goals and collaborated with staff members to
+                implement customer service initiatives.</li> 
+              <li>Conferred with sales teams and team leaders to communicate
+                targets, boost revenue and improve promotional strategies.</li>
+              <li>Managed department call volume of 1000 calls per day and
+                coordinated department schedules to maximize coverage during
+                peak hours.</li>
+              <li>Increased customer retention by developing and offering unique
+              discount options while driving interest in new product lines.</li>
+          </ul>
           <hr>
         </div>
         <div class="w3-container">
