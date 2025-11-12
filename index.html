@@ -6,53 +6,129 @@
   <title>Allan Siabunkululu — Customer Service Manager</title>
   <meta name="description" content="Professional portfolio of Allan Siabunkululu — Customer Service Manager specializing in credit collections, customer success and PAYG solar operations." />
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#1e90ff;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#e6eef8;background:linear-gradient(180deg,#071027 0%,#08131b 100%);-webkit-font-smoothing:antialiased}
-    .container{max-width:980px;margin:36px auto;padding:28px}
-    header{display:flex;gap:20px;align-items:center}
-    .avatar{width:120px;height:120px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#5fd3ff);display:flex;align-items:center;justify-content:center;color:#021024;font-weight:700;font-size:28px}
-    h1{margin:0;font-size:28px}
-    .title{color:var(--muted);margin-top:6px}
-    .top-right{margin-left:auto;text-align:right}
-    .contact{font-size:14px;color:var(--muted);line-height:1.6}
+    :root {
+      --bg: #0f1724;
+      --card: #10182c;
+      --accent: #1e90ff;
+      --accent-light: #63b3ff;
+      --muted: #94a3b8;
+      --text: #f1f5f9;
+      --glass: rgba(255, 255, 255, 0.05);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+      color: var(--text);
+      background: linear-gradient(180deg, #071027 0%, #08131b 100%);
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .container { max-width: 1000px; margin: 40px auto; padding: 28px; animation: slideUp 1.2s ease-in-out forwards; opacity: 0; }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header, main, footer { animation: fadeUp 1.5s ease-out forwards; opacity: 0; }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
-    .buttons{margin-top:14px;display:flex;gap:10px}
-    a.btn{background:var(--accent);color:#021024;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    a.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:10px 14px;border-radius:10px;text-decoration:none}
+    header { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .avatar {
+      width: 120px; height: 120px; border-radius: 16px;
+      overflow: hidden; box-shadow: 0 4px 12px rgba(30,144,255,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .avatar img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .avatar:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(30,144,255,0.5); }
 
-    main{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:26px}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 4px 20px rgba(2,6,23,0.6)}
-    .section-title{font-size:16px;margin:0 0 10px 0}
-    .summary{color:var(--muted);line-height:1.6}
+    h1 { margin: 0; font-size: 30px; }
+    .title { color: var(--muted); margin-top: 6px; }
+    .top-right { margin-left: auto; text-align: right; }
+    .contact { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
-    .experience{display:flex;flex-direction:column;gap:12px}
-    .exp-item{background:var(--glass);padding:12px;border-radius:10px}
-    .exp-item h4{margin:0;font-size:15px}
-    .exp-item .meta{font-size:13px;color:var(--muted);margin-top:6px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .skill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .buttons { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
+    a.btn {
+      background: var(--accent);
+      color: #021024;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    a.btn:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(30,144,255,0.4); }
+    a.ghost {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--muted);
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a.ghost:hover { border-color: var(--accent); color: var(--accent-light); }
 
-    aside .card + .card{margin-top:16px}
-    .download{display:block;text-align:center;margin-top:8px}
-    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+    main { display: grid; grid-template-columns: 1fr 320px; gap: 24px; margin-top: 26px; }
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(30,144,255,0.15); }
+    .section-title { font-size: 18px; margin: 0 0 10px 0; color: var(--accent-light); }
+    .summary { color: var(--muted); line-height: 1.7; }
 
-    @media(max-width:880px){main{grid-template-columns:1fr} .top-right{text-align:left;margin-left:0}}
+    .experience { display: flex; flex-direction: column; gap: 12px; }
+    .exp-item { background: var(--glass); padding: 12px; border-radius: 10px; transition: background 0.3s ease; }
+    .exp-item:hover { background: rgba(255,255,255,0.08); }
+    .exp-item h4 { margin: 0; font-size: 15px; color: var(--text); }
+    .exp-item .meta { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .skill {
+      background: rgba(255,255,255,0.08);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+      transition: all 0.3s ease;
+    }
+    .skill:hover { background: var(--accent); color: #021024; transform: scale(1.05); }
+
+    aside .card + .card { margin-top: 16px; }
+    .download { display: block; text-align: center; margin-top: 8px; }
+    footer { margin-top: 28px; color: var(--muted); font-size: 13px; text-align: center; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.05); animation: fadeUp 2s ease-in-out forwards; }
+
+    @media (max-width: 880px) {
+      main { grid-template-columns: 1fr; }
+      .top-right { text-align: left; margin-left: 0; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="avatar">AS</div>
+      <div class="avatar"><img src="profile_pic.jpg" alt="Allan Siabunkululu Profile Picture"></div>
       <div>
         <h1>Allan Siabunkululu</h1>
         <div class="title">Customer Service Manager</div>
-        <div class="contact">+260 978 981 069 , +260 767 728 644&nbsp; | &nbsp; allan.siabunkululu@outlook.com</div>
+        <div class="contact">+260 978 981 069 , +260 767 728 644 | allan.siabunkululu@outlook.com</div>
         <div class="buttons">
-          <!-- Update this LinkedIn URL to your live profile -->
-          <a class="btn" href="www.linkedin.com/in/allan-siabunkululu-342a7680" target="_blank" rel="noopener">LinkedIn</a>
-          <!-- CV download uses a local sandbox path; when deployed, replace with hosted URL -->
-          <a class="btn" href="ALLAN SIABUNKULULU CV_ (Nov).pdf" download="ALLAN_SIABUNKULULU_CV.pdf">Download CV (PDF)</a>
+          <a class="btn" href="https://www.linkedin.com/in/allan-siabunkululu" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="ALLAN SIABUNKULULU CV_ (Nov).pdf" download>Download CV (PDF)</a>
           <a class="ghost" href="#contact">Contact</a>
         </div>
       </div>
@@ -77,19 +153,16 @@
               <div class="meta">Mar 2022 — Present</div>
               <div class="meta">Led a 22-person team; improved response times by 30% and drove increased customer retention through training and process improvements.</div>
             </div>
-
             <div class="exp-item">
               <h4>Credit Collections Supervisor — Kazang Solar Distributors</h4>
               <div class="meta">Feb 2019 — Mar 2022</div>
               <div class="meta">Supervised collections team, implemented recovery strategies, and contributed to improved cash collections and portfolio health.</div>
             </div>
-
             <div class="exp-item">
               <h4>Backoffice Team Leader — ISON Zambia BPO</h4>
               <div class="meta">Jul 2018 — Jan 2019</div>
               <div class="meta">Managed agent performance metrics and coordinated recovery desks and social media activities.</div>
             </div>
-
             <div class="exp-item">
               <h4>Credit Control Officer / Customer Care — Airtel Zambia</h4>
               <div class="meta">2010 — 2018</div>
